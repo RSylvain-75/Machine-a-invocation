@@ -4,28 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Machine à Invocation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section> 
         <h1>La Machine à Invocation</h1>
         
-        <form id="invocation">
+            <form id="invocation">
 
-            <label for="prenom">Ton prénom</label>
-            <input id="prenom" type="text" placeholder="Entrez votre prénom">
-            <label for="creature">choisis la créature</label>
+                <label for="prenom">Ton prénom</label>
+                    <input id="prenom" type="text" placeholder="Entrez votre prénom">
+                    <label for="creature">choisis la créature</label>
 
-            <select id="creature">
-                <option>🐙 le Chat-Octo</option>
-                <option>🐉 le Dragon-Debug</option>
-                <option>🦄 la Licorne-CSS</option>
-                <option>🦊 le Renard-Refacto</option>
-            </select>
+                <select id="creature">
+                    <option>🐙 le Chat-Octo</option>
+                    <option>🐉 le Dragon-Debug</option>
+                    <option>🦄 la Licorne-CSS</option>
+                    <option>🦊 le Renard-Refacto</option>
+                </select>
 
-            <button type="submit">Invoquer</button>
+                <button type="submit">Invoquer</button>
 
-        </form>
+            </form>
+
+        <section id="resultat" class="cache"> 
+                <p id="message"></p>
+        </section>
            
     </section>
+
+<script src="script.js"></script>
 </body>
+
 </html>
