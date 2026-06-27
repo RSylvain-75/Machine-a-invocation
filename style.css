@@ -1,10 +1,136 @@
 body {
+
+    font-family: "Cinzel", serif;
     min-height: 100vh;
+    margin: 0;
+    padding: 16px;
+    box-sizing: border-box;
+    position: relative;
+
+    background-image: url("Fantaisie.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    z-index: -1;
+}
+
+html {
+    min-height: 100%;
+}
+.machine {
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+
+    padding: 40px;
+    border-radius: 25px;
+
+    background: rgba(5, 8, 30, 0.60);
+    color: white;
+    text-align: center;
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,.15);
+    box-shadow:
+        0 0 20px rgba(95,0,255,.4),
+        0 0 60px rgba(0,255,255,.15);
+}
+input,
+select,
+button {
+        box-sizing: border-box;
+}
+
+h1{
+    color:white;
+    font-size:2.5rem;
+    text-align:center;
+    letter-spacing:2px;
+
+    text-shadow:
+        0 0 10px #6d3dff,
+        0 0 25px #8d68ff;
+}
+
+input,
+select{
+
+    width:100%;
+    padding:15px;
+
+    border-radius:12px;
+
+    border:none;
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+    margin-bottom:20px;
+}
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    background:linear-gradient(90deg,#6d3dff,#00d4ff);
+
+    color:white;
+
+    transition:.3s;
+}
+button:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+    0 0 20px cyan,
+    0 0 40px violet;
+}
+
 .cache {
     display: none;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px;
+    }
+
+    .machine {
+        padding: 24px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+input,
+select,
+button {
+    padding: 12px;
+    font-size: 1rem;
+    }
 }
